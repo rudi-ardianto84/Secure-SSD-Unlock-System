@@ -1,0 +1,67 @@
+Components Used
+1. Arduino Mega 2560
+
+The main microcontroller responsible for coordinating all system operations, including data communication, actuator control, and program logic execution.
+
+2. RTC DS1307
+
+A Real-Time Clock module used to maintain accurate time data (hours, minutes, date) even when the system is powered off, supported by a backup battery.
+
+3. EEPROM 24LC256
+
+A 256-Kbit external non-volatile memory module used to store NFC card IDs and various system configuration data.
+
+4. FTDI Basic Programmer / FT232
+
+A USB-to-Serial converter used for communication between the Arduino and a computer at 9600 baud. It is also utilized for firmware programming and debugging.
+
+5. TP4056 Lithium Battery Charger
+
+A charging module for 3.7V Li-ion / LiPo batteries, providing regulated charging current and overcharge protection.
+
+6. 3.7V Li-ion Battery (BAT1)
+
+Serves as the primary power source for standalone system operation without USB power.
+
+7. Switch Button
+
+Used as a user interface to switch between operation modes, such as NFC-based verification mode or Arduino-based verification mode.
+
+8. OLED Display
+
+Displays system information, status messages, notifications, and authentication results.
+
+9. AS608 Fingerprint Sensor
+
+A fingerprint module that supports biometric authentication, including fingerprint enrollment, verification, and template matching.
+
+10. Boost Converter (MC34063A)
+
+A DC-DC step-up converter used to increase the 3.7V battery voltage to 5V.
+This converter circuit includes:
+
+L1 Inductor (330 µH)
+
+1N5819 Schottky Diode
+
+Feedback Resistors (R3, R4, R6, R7)
+
+Capacitors (C3, C4, C6, C7)
+
+Ensures a stable 5V supply for the Arduino.
+
+11. Power Standby Module
+
+A custom-designed module to reduce standby power consumption and enhance security by preventing unauthorized access to the Arduino. The module includes:
+
+Relay (electronic power switch)
+
+1N4007 Diode (reverse-voltage protection)
+
+Push Button (activation trigger)
+
+Capacitors (voltage stabilization)
+
+Resistors (current limiting)
+
+LED Indicator (power status display)

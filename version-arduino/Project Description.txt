@@ -1,0 +1,11 @@
+Project Description
+
+This project is an implementation of a biometric and NFC-based authentication system designed to unlock an encrypted NVMe SSD without requiring manual password entry. Inspired by the increasing prevalence of cybersecurity breaches targeting government and institutional data in Indonesia, the system provides an alternative authentication mechanism that is both secure and user-friendly.
+
+Developed using an Arduino Mega 2560, the system integrates an AS608 fingerprint sensor, a PN532 NFC module, external EEPROM, a real-time clock, and a custom power-standby hardware module. Instead of manually typing a long and complex encryption password, users can authenticate themselves either via registered fingerprint data or NFC credentials (smartphone or NFC card). Once authenticated, the Arduino securely transmits an encrypted key to a Windows-based computer to automatically decrypt the NVMe SSD using VeraCrypt.
+
+The hardware design includes a 3.7V Li-ion battery, a TP4056 charging module, and an MC34063A boost converter, ensuring stable power delivery and portability. A relay-based standby power system is implemented to reduce battery consumption and minimize exposure to unauthorized tampering attacks on the Arduino.
+
+Performance testing demonstrates that the system operates efficiently and reliably, with average fingerprint verification speeds of 0.74–0.84 seconds, NFC verification speeds of 0.74–0.94 seconds, and SSD decryption times ranging from 2.95 to 7.82 seconds, depending on the host device used. These results confirm that biometric and NFC authentication can effectively replace manual password input while maintaining speed, accuracy, and compatibility across multiple computer platforms.
+
+This project presents a practical hardware-based security solution that enhances data protection through multi-factor authentication, encrypted key transmission, and efficient power management. It is suitable for further development in embedded security systems, cryptography research, and real-world data protection applications.
