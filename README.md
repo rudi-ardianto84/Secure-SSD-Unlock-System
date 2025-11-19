@@ -17,5 +17,5 @@ Next, create a VeraCrypt container with the desired size, place the resulting `.
 
 This project is ideal for users who want to enhance the security of SSD NVMe drives, such as in public laptops, shared workstations, or systems that require high-level data protection. Contributions are welcome for adding features such as access logging, multi-user support, or additional authentication methods.
 
-**License:** [Insert your project license, e.g., MIT]  
+**License:** [ MIT ]  
 **Author:** Rudi Ardianto — [GitHub rudi-ardianto84](https://github.com/rudi-ardianto84)
