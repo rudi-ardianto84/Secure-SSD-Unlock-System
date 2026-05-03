@@ -1,21 +1,124 @@
-# Secure SSD Unlock System (Arduino Edition)
+# 🔐 Secure SSD Unlock System (Hardware-Based Authentication)
 
-The Secure SSD Unlock System is an advanced security solution that combines hardware and software to enable fingerprint or NFC authentication via Arduino before unlocking and mounting an encrypted container on an SSD NVMe. The system is designed to run entirely in a portable manner, without requiring a Python installation on the host machine — the Python interpreter and all required modules are installed directly on the root of the SSD to be encrypted.
+## 📌 Overview
 
-The architecture is modular: Arduino acts as the authentication controller. Once a fingerprint or NFC card is verified, the Arduino sends a signal to the Python scripts to decrypt and mount the secure VeraCrypt volume. The encrypted container is stored in the `bin` folder on the SSD, ensuring that all data remains inside the encrypted drive and can only be accessed through authorized authentication.
+This project is a **secure SSD unlock system** that uses external hardware authentication (Arduino/ESP32) combined with encryption to protect storage access.
 
-To set up the system, install a portable Python version directly onto the root of the SSD (for example, `Z:\PythonPortable\`). Then, open the portable Python terminal and run the following command to install all required dependencies:
+Unlike traditional software-only disk protection, this system ensures that the SSD **cannot be accessed without valid hardware authentication**, adding an extra physical security layer.
 
+---
 
-Next, create a VeraCrypt container with the desired size, place the resulting `.hc` file in the `bin` folder on the SSD, and run `start.exe` to initiate the authentication and automatic mounting process.
+## 🚨 Problem Statement
 
-**Key Features:**
-- Fingerprint and NFC authentication via Arduino.
-- Secure encryption and decryption of SSD containers using VeraCrypt.
-- Fully portable Python environment for system independence from the host machine.
-- Centralized `bin` folder to store the container, ensuring data integrity and security.
+Most disk encryption systems rely only on:
 
-This project is ideal for users who want to enhance the security of SSD NVMe drives, such as in public laptops, shared workstations, or systems that require high-level data protection. Contributions are welcome for adding features such as access logging, multi-user support, or additional authentication methods.
+* Password-based authentication
+* Software-level protection
 
-**License:** [ MIT ]  
-**Author:** Rudi Ardianto — [GitHub rudi-ardianto84](https://github.com/rudi-ardianto84)
+This creates risks such as:
+
+* Brute-force attacks
+* Unauthorized access if credentials are leaked
+* Lack of hardware-level security
+
+---
+
+## 💡 Solution
+
+This project introduces a **multi-layer security system**:
+
+* 🔐 Encryption using AES (GCM / CBC)
+* 🧠 External authentication via microcontroller
+* 🧬 Optional biometric / NFC integration
+* 🔄 Secure communication between device and host
+* 🧩 Split data validation (hardware + database)
+
+➡️ Result: SSD access is only granted when all authentication layers are valid.
+
+---
+
+## 🏗️ System Architecture
+
+![System Architecture](docs/architecture.png)
+
+---
+
+## 🔄 Flowchart
+
+![Flowchart](docs/flowchart.png)
+
+---
+
+## ⚙️ Tech Stack
+
+* **Hardware**:
+
+  * Arduino / ESP32
+  * Fingerprint sensor (optional)
+  * NFC module (optional)
+
+* **Software**:
+
+  * Python (host system)
+  * Serial communication
+  * Encryption (AES-GCM / AES-CBC)
+
+* **Security Concepts**:
+
+  * Authenticated encryption (AES-GCM)
+  * Nonce & timestamp validation
+  * Anti replay attack mechanism
+
+---
+
+## 🔑 Key Features
+
+* Hardware-based SSD unlocking
+* Secure communication using AES-GCM
+* Protection against replay attacks
+* Multi-factor authentication (hardware + data)
+* Modular system (can integrate biometric / NFC)
+
+---
+
+## 🧪 How It Works
+
+1. User initiates unlock request
+2. System sends encrypted challenge to hardware
+3. Hardware verifies authentication (fingerprint/NFC/etc.)
+4. Encrypted response is validated
+5. SSD is unlocked only if all checks pass
+
+---
+
+## 📷 Demo / Implementation
+
+(Add your real hardware photos or demo video here)
+
+---
+
+## 📖 Documentation
+
+Detailed explanation (Bahasa Indonesia):
+👉 `docs/artikel.md`
+
+---
+
+## 🚀 Future Improvements
+
+* Integration with TPM / secure element
+* Full disk automation
+* Enhanced key management (Argon2 / PBKDF2)
+
+---
+
+## 👨‍💻 Author
+
+**Rudi Ardianto**
+Electronics Engineering Student – Embedded Systems & Security
+
+---
+
+## ⭐ Notes
+
+This project is designed as a **practical implementation of hardware-based storage security**, combining embedded systems and cryptography.
