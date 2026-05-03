@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project is a **secure SSD unlock system** that uses external hardware authentication (Arduino/ESP32) combined with encryption to protect storage access.
+This project is a **secure SSD unlock system** that uses external hardware authentication (Arduino) combined with encryption to protect storage access.
 
 Unlike traditional software-only disk protection, this system ensures that the SSD **cannot be accessed without valid hardware authentication**, adding an extra physical security layer.
 
