@@ -106,7 +106,7 @@ Detailed explanation (Bahasa Indonesia):
 
 ## 🚀 Future Improvements
 
-* Integration with TPM / secure element
+* Integration with secure element
 * Full disk automation
 * Enhanced key management (Argon2 / PBKDF2)
 
