@@ -45,7 +45,7 @@ This project introduces a **multi-layer security system**:
 
 ## 🔄 Flowchart
 
-![Flowchart](docs/flowchart.png)
+[![Flowchart](docs/flowchart.png)](https://github.com/rudi-ardianto84/Secure-SSD-Unlock-System/tree/main/version-arduino/flowchart%20and%20diagram%20blok)
 
 ---
 
