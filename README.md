@@ -39,7 +39,7 @@ This project introduces a **multi-layer security system**:
 
 ## 🏗️ System Architecture
 
-![System Architecture](docs/architecture.png)
+[![System Architecture](docs/architecture.png)](https://github.com/rudi-ardianto84/Secure-SSD-Unlock-System/blob/main/version-arduino/program_mikrokontroler/schematic/schematic.jpg)
 
 ---
 
