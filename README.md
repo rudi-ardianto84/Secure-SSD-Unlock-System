@@ -100,7 +100,7 @@ https://github.com/rudi-ardianto84/Secure-SSD-Unlock-System/tree/main/version-ar
 ## 📖 Documentation
 
 Detailed explanation (Bahasa Indonesia):
-👉 `[docs/artikel.md`](https://github.com/rudi-ardianto84/Secure-SSD-Unlock-System/blob/main/version-arduino/project-arduino-fingerprint-nfc-nvme-auth-system.pdf.pdf)
+👉 (https://github.com/rudi-ardianto84/Secure-SSD-Unlock-System/blob/main/version-arduino/project-arduino-fingerprint-nfc-nvme-auth-system.pdf.pdf)
 
 ---
 
