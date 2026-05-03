@@ -92,8 +92,8 @@ This project introduces a **multi-layer security system**:
 ---
 
 ## 📷 Demo / Implementation
-
-(Add your real hardware photos or demo video here)
+[
+https://github.com/rudi-ardianto84/Secure-SSD-Unlock-System/tree/main/version-arduino/documentation
 
 ---
 
