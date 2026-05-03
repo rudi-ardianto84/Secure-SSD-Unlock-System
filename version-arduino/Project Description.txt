@@ -1,11 +1,39 @@
-Project Description
+## 📌 Project Description
 
-This project is an implementation of a biometric and NFC-based authentication system designed to unlock an encrypted NVMe SSD without requiring manual password entry. Inspired by the increasing prevalence of cybersecurity breaches targeting government and institutional data in Indonesia, the system provides an alternative authentication mechanism that is both secure and user-friendly.
+This project implements a **hardware-based authentication system** using biometric (fingerprint) and NFC to securely unlock an encrypted NVMe SSD without manual password input.
 
-Developed using an Arduino Mega 2560, the system integrates an AS608 fingerprint sensor, a PN532 NFC module, external EEPROM, a real-time clock, and a custom power-standby hardware module. Instead of manually typing a long and complex encryption password, users can authenticate themselves either via registered fingerprint data or NFC credentials (smartphone or NFC card). Once authenticated, the Arduino securely transmits an encrypted key to a Windows-based computer to automatically decrypt the NVMe SSD using VeraCrypt.
+The system is designed to address common security risks in traditional password-based disk encryption, such as brute-force attacks and credential leakage, by introducing **multi-factor authentication with external hardware validation**.
 
-The hardware design includes a 3.7V Li-ion battery, a TP4056 charging module, and an MC34063A boost converter, ensuring stable power delivery and portability. A relay-based standby power system is implemented to reduce battery consumption and minimize exposure to unauthorized tampering attacks on the Arduino.
+Built on **Arduino Mega 2560**, the system integrates:
 
-Performance testing demonstrates that the system operates efficiently and reliably, with average fingerprint verification speeds of 0.74–0.84 seconds, NFC verification speeds of 0.74–0.94 seconds, and SSD decryption times ranging from 2.95 to 7.82 seconds, depending on the host device used. These results confirm that biometric and NFC authentication can effectively replace manual password input while maintaining speed, accuracy, and compatibility across multiple computer platforms.
+* Fingerprint sensor (AS608)
+* NFC module (PN532)
+* External EEPROM for secure data storage
+* Real-Time Clock (RTC) for timestamp validation
+* Custom power management module
 
-This project presents a practical hardware-based security solution that enhances data protection through multi-factor authentication, encrypted key transmission, and efficient power management. It is suitable for further development in embedded security systems, cryptography research, and real-world data protection applications.
+During operation, the user authenticates via fingerprint or NFC. Upon successful verification, the Arduino sends an **encrypted authentication key** to a Windows system, which then decrypts the NVMe SSD using VeraCrypt.
+
+The system also includes:
+
+* 🔋 Portable power design (Li-ion + TP4056 + boost converter)
+* ⚡ Standby power control using relay (to reduce attack surface & power usage)
+* 🔐 Secure communication with encryption & validation mechanisms
+
+### 🚀 Performance
+
+* Fingerprint authentication: ~0.74 – 0.84 seconds
+* NFC authentication: ~0.74 – 0.94 seconds
+* SSD unlock process: ~2.95 – 7.82 seconds
+
+These results demonstrate that hardware-based authentication can effectively replace manual password entry while maintaining **security, efficiency, and usability**.
+
+### 🎯 Key Contribution
+
+This project provides a **practical embedded security solution** combining:
+
+* Hardware authentication
+* Cryptographic protection
+* Secure storage access control
+
+It is suitable for applications in **embedded systems, IoT security, and data protection systems**.
